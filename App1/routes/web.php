@@ -18,9 +18,17 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('/perfil', function () {
+    return view('perfil');
+})->name('perfil');
+
 Route::get('/about', function () {
     return view('about');
 })->name('about');
+
+Route::get('create', function () {
+    return view('create');
+})->name('create');
 
 Route::get('/contact', function () {
     return view('contact');
