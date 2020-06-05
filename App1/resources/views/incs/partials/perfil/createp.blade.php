@@ -12,12 +12,22 @@
         <!-- FORMULARIO PERFIL EMPRESARIAL -->
         <div class="row">
             <div class="col-md-4">
-                <form action="">
+                <form action="create" method="POST">
                 @csrf
+                    <!-- NOME -->
+                    <div class="form-group">
+                        <label for="titulo">Nome Empresarial</label>
+                        <input type="text" class="form-control" id="nome" name="nome" value="{{old('nome')}}">
+                    </div>
                     <!-- EMAIL -->
                     <div class="form-group">
                         <label for="titulo">Email Empresarial</label>
                         <input type="text" class="form-control" id="email" name="email" value="{{old('email')}}">
+                    </div>
+                    <!-- NOME -->
+                    <div class="form-group">
+                        <label for="titulo">Numero Telemovel</label>
+                        <input type="text" class="form-control" id="nTelemovel" name="nTelemovel" value="{{old('nTelemovel')}}">
                     </div>
                     <!-- MORADA -->
                     <div class="form-group">

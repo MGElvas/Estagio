@@ -78,7 +78,7 @@
                                     </li>
                                 @else
                                     <li class="has-children">
-                                        <a href="job-listings">{{ Auth::user()->name }}</a>
+                                        <a href="perfil">{{ Auth::user()->name }}</a>
                                         <ul class="dropdown">
                                             <li>
                                                 <a class="dropdown-item" href="{{ route('logout') }}"

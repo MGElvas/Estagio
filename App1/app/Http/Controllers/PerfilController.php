@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Empresa;
 use App\Perfil;
 
 class PerfilController extends Controller
@@ -11,26 +12,35 @@ class PerfilController extends Controller
         return view();
     }
     
-    public function store(){
-        Perfil::create($this->val_perfil());
-        return redirect(route(''))->with('fm-success','Perfil criado com sucesso');
+    public function store(Request $request){
+        $perfil= new Empresa;
+        $perfil->nome= request('nome');
+        $perfil->email= request('email');
+        $perfil->nTelemovel= request('nTelemovel');
+        $perfil->morada= request('morada');
+        $perfil->cdPostal= request('cdpostal');
+        $perfil->contacto= request('pessoa_contacto');
+        $perfil->nContribuinte= request('nContribuinte');
+        $perfil->descricao= request('descricao');
+
+        $perfil->save();
+        //return $request->all();
+        return (redirect (route('perfil'))->with('fm-success','Perfil criado com sucesso'));
     }
     
-    public function show(Perfil $perfil){
-        return view ('perfil.show')->with(compact('perfil'));
+    public function show(Empresa $perfil){
+        return view();
     }
     
-    public function edit(Perfil $perfil){
-        return view ('perfil.edit')->with(compact('perfil'));
+    public function edit(Empresa $perfil){
+        return view();
     }
     
-    public function update (Perfil $perfil){
-        $perfil->update($this->val_perfil());
-        return redirect (route(''))->with('fm-success','Perfil editado com sucesso');
+    public function update (Empresa $perfil){
+        return view();
     }
 
     public function destroy($id){
-        Perfil::findOrFail($id)->delete();
-        return redirect (route(''))->with('fm-success','Perfil eliminado com sucesso');
+        return view();
     }
 }
