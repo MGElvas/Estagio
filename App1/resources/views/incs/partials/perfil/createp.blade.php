@@ -18,62 +18,33 @@
                     <div class="form-group">
                         <label for="titulo">Email Empresarial</label>
                         <input type="text" class="form-control" id="email" name="email" value="{{old('email')}}">
-                        @error('post')
-                            <div class="invalid-feedback">
-                                {{ $message}}.
-                            </div>
-                        @enderror
                     </div>
                     <!-- MORADA -->
                     <div class="form-group">
                         <label for="titulo">Morada</label>
                         <input type="text" class="form-control" id="morada" name="morada" value="{{old('morada')}}">
-                        @error('post')
-                            <div class="invalid-feedback">
-                                {{ $message}}.
-                            </div>
-                        @enderror
                     </div>
                     <!-- CODIGO POSTAL -->
                     <div class="form-group">
                         <label for="titulo">Codigo Postal</label>
                         <input type="text" class="form-control" id="cdpostal" name="cdpostal" value="{{old('cdpostal')}}">
-                        @error('post')
-                            <div class="invalid-feedback">
-                                {{ $message}}.
-                            </div>
-                        @enderror
                     </div>
                     <!-- PESSOA DE CONTACTO -->
                     <div class="form-group">
                         <label for="titulo">Representante</label>
                         <input type="text" class="form-control" id="pessoa_contacto" name="pessoa_contacto" value="{{old('pessoa_contacto')}}">
-                        @error('post')
-                            <div class="invalid-feedback">
-                                {{ $message}}.
-                            </div>
-                        @enderror
                     </div>
                     <!-- NUMERO CONTRIBUINTE EMPRESARIAL -->
                     <div class="form-group">
                         <label for="titulo">Nº Contribuinte</label>
                         <input type="text" class="form-control" id="nContribuinte" name="nContribuinte" value="{{old('nContribuinte')}}">
-                        @error('post')
-                            <div class="invalid-feedback">
-                                {{ $message}}.
-                            </div>
-                        @enderror
+
                     </div>
                     <!--DESCRIÇÃO DA EMPRESA -->
                     <div class="form-group">
                         <label for="titulo">Descreva a sua empresa</label>
                         <!-- TEXT AREA ??? -->
-                        <input type="text" class="form-control" id="descricao" name="descricao" value="{{old('descricao')}}">
-                        @error('post')
-                            <div class="invalid-feedback">
-                                {{ $message}}.
-                            </div>
-                        @enderror
+                        <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10" value="{{old('descricao')}}"></textarea>
                     </div>
                     <input type="submit" value="Confirmar" class="btn btn-sm btn-success">
                 </form>
