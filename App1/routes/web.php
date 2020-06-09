@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('index');
 })->name('index');
@@ -56,5 +55,11 @@ Route::get('/job-listings',function(){
     return view('job-listings');
 })->name('job-listings');
 
+
+
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 Route::post('/create','PerfilController@store');
+Route::get('/show-perfil','PerfilController@show');

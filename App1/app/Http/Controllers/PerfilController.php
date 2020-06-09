@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empresa;
-use App\Perfil;
+use App\User;
 
 class PerfilController extends Controller
 {
@@ -29,7 +29,8 @@ class PerfilController extends Controller
     }
     
     public function show(Empresa $perfil){
-        return view();
+        $perfil =User::find(0)->id;
+        return view('show-perfil')->with(compact('perfil'));    
     }
     
     public function edit(Empresa $perfil){

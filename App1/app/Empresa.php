@@ -14,4 +14,8 @@ class Empresa extends Model
     const UPDATED_AT='dtAtualizado';
     protected $keyType='int';
     protected $primaryKey='idEmpresa'; */
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

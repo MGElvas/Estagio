@@ -1,2 +1,3 @@
 @extends('layouts.mylayout')
-@extends('incs.partials.perfil.home')
+@include('incs.partials.perfil.home')
+
