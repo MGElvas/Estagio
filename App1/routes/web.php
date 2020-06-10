@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/perfil', function () {
+Route::get('/perfils', function () {
     return view('perfil');
 })->name('perfil');
 
@@ -50,16 +50,18 @@ Route::get('testimonials', function () {
     return view('testimonials');
 })->name('testimonials');
 Auth::routes();
-
+Route::get('/editar',function(){
+    return view ('editar');
+})->name('editar');
 Route::get('/job-listings',function(){
     return view('job-listings');
 })->name('job-listings');
 
 
 
-
-
+Route::post('/create','PerfilController@store')->name('guardar');
+Route::get('/show-perfil','PerfilController@show')->name('mostrar');
 
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/create','PerfilController@store');
-Route::get('/show-perfil','PerfilController@show');
+
+Route::resource('perfil','PerfilController');

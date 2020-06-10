@@ -10,4 +10,26 @@
             </div>
         </div>
     </div>
+    <form action="{{route('categorias.update',$categoria->id)}}" method="post">
+        @csrf
+        @method('put')
+        <div class="form-group">
+            <label for="categoria">Categoria</label>
+            <input type="text" class="form-control
+            @if ($errors->any())
+                @if ($errors->has('categoria'))
+                    is-invalid
+                @else
+                    is-valid
+                @endif
+            @endif
+            " id="categoria" name="categoria" value="{{$categoria->categoria}}">
+            @error('categoria')
+                <div class="invalid-feedback">
+                    {{ $message }}.
+                </div>
+            @enderror
+        </div>
+        <input type="submit" value="Confirmar" class="btn btn-sm btn-success">
+    </form>
 </section>

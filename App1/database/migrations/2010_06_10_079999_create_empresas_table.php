@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -26,7 +25,7 @@ class CreateEmpresasTable extends Migration
             $table->string('cdPostal',16);
             $table->string('contacto',45)->unique();
             $table->string('nContribuinte',16)->unique();
-            
+
             $table->unsignedBigInteger('userid');
             $table->foreign('userid')->references('id')->on('users');
 

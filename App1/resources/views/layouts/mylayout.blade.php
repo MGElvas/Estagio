@@ -61,7 +61,7 @@
                                 <li class="has-children">
                                     <a href="services">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="perfil">Perfil</a></li>
+                                        <li><a href="perfils">Perfil</a></li>
                                         <li><a href="testimonials">ABC</a></li>
                                         <li><a href="testimonials">Testimonials</a></li>
                                         <li><a href="faq">Frequently Asked Questions</a></li>
@@ -78,7 +78,7 @@
                                     </li>
                                 @else
                                     <li class="has-children">
-                                        <a href="perfil">{{ Auth::user()->name }}</a>
+                                        <a href="perfils">{{ Auth::user()->name }}</a>
                                         <ul class="dropdown">
                                             <li>
                                                 <a class="dropdown-item" href="{{ route('logout') }}"

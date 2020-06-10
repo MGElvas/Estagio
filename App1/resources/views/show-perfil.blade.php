@@ -1,7 +1,18 @@
 @extends('layouts.mylayout')
 
 @include('incs.partials.perfil.home')
-<tr>
-    <td>{{$perfil->id}}</td>    
-    <td>{{$perfil->user->name}} </td>
-</tr> 
+
+<div>
+    <ul>
+        @foreach($perfil as $i)
+            <li>{{$i->nome}}</li>
+            <li>{{$i->email}}</li>
+            <li>{{$i->nTelemovel}}</li>
+            <li>{{$i->morada}}</li>
+            <li>{{$i->cdPostal}}</li>
+            <li>{{$i->contacto}}</li>
+            <li>{{$i->descricao}}</li>
+
+        @endforeach
+    </ul>
+</div>

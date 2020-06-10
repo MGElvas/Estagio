@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Empresa;
 use App\User;
@@ -22,15 +22,14 @@ class PerfilController extends Controller
         $perfil->contacto= request('pessoa_contacto');
         $perfil->nContribuinte= request('nContribuinte');
         $perfil->descricao= request('descricao');
-
         $perfil->save();
         //return $request->all();
         return (redirect (route('perfil'))->with('fm-success','Perfil criado com sucesso'));
     }
     
     public function show(Empresa $perfil){
-        $perfil =User::find(0)->id;
-        return view('show-perfil')->with(compact('perfil'));    
+        $perfil =Empresa::where('id',$perfil);
+        return view ('show-perfil',['perfil'=>$perfil]);
     }
     
     public function edit(Empresa $perfil){
