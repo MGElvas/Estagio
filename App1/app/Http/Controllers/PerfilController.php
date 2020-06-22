@@ -22,14 +22,22 @@ class PerfilController extends Controller
         $perfil->contacto= request('pessoa_contacto');
         $perfil->nContribuinte= request('nContribuinte');
         $perfil->descricao= request('descricao');
+        $perfil->user_id =Auth()->id();
         $perfil->save();
         //return $request->all();
         return (redirect (route('perfil'))->with('fm-success','Perfil criado com sucesso'));
     }
     
-    public function show(Empresa $perfil){
-        $perfil =Empresa::where('id',$perfil);
-        return view ('show-perfil',['perfil'=>$perfil]);
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+    public function show($id)
+    {
+        $perfil = Empresa::find($id);
+        return view('show-perfil')->with(compact('perfil'));
     }
     
     public function edit(Empresa $perfil){

@@ -25,9 +25,19 @@ class CreateEmpresasTable extends Migration
             $table->string('cdPostal',16);
             $table->string('contacto',45)->unique();
             $table->string('nContribuinte',16)->unique();
-
+            //estrangeira User 1-n
             $table->unsignedBigInteger('userid');
             $table->foreign('userid')->references('id')->on('users');
+            //estrangeira Trabalhos 1-n
+            $table->unsignedBigInteger('trabalho_id');
+            $table->foreign('trabalho_id')->references('id')->on('trabalhos');
+            //estrangeira estados 1-1
+            $table->unsignedBigInteger('estado_id');
+            $table->foreign('estado_id')->references('id')->on('estados');
+            //estrangeira especialidades 1-n
+            $table->unsignedBigInteger('especialidade_id');
+            $table->foreign('especialidade_id')->references('id')->on('especilidades');
+
 
         });
     }

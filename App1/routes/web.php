@@ -62,6 +62,12 @@ Route::get('/job-listings',function(){
 Route::post('/create','PerfilController@store')->name('guardar');
 Route::get('/show-perfil','PerfilController@show')->name('mostrar');
 
+
+
+Route::get('/amilcar','PerfilController@show');
+
+
+
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('perfil','PerfilController');

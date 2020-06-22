@@ -18,4 +18,16 @@ class Empresa extends Model
     {
         return $this->belongsTo(User::class);
     }
+    public function especilidades()
+    {
+        return $this->hasMany(Especialidades::class);
+    }
+    public function estados()
+    {
+        return $this->hasOne(Estados::class);
+    }
+    public function trabalhos()
+    {
+        return $this->hasMany(Trabalhos::class);
+    }
 }

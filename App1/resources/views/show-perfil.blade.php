@@ -4,15 +4,12 @@
 
 <div>
     <ul>
-        @foreach($perfil as $i)
-            <li>{{$i->nome}}</li>
-            <li>{{$i->email}}</li>
-            <li>{{$i->nTelemovel}}</li>
-            <li>{{$i->morada}}</li>
-            <li>{{$i->cdPostal}}</li>
-            <li>{{$i->contacto}}</li>
-            <li>{{$i->descricao}}</li>
-
-        @endforeach
+            <li>{{$perfil->nome}}</li>
+            <li>{{$perfil->email}}</li>
+            <li>{{$perfil->nTelemovel}}</li>
+            <li>{{$perfil->morada}}</li>
+            <li>{{$perfil->cdPostal}}</li>
+            <li>{{$perfil->contacto}}</li>
+            <li>{{$perfil->descricao}}</li>
     </ul>
 </div>
