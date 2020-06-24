@@ -26,19 +26,13 @@ class CreateEmpresasTable extends Migration
             $table->string('contacto',45)->unique();
             $table->string('nContribuinte',16)->unique();
             //estrangeira User 1-n
-            $table->unsignedBigInteger('userid');
-            $table->foreign('userid')->references('id')->on('users');
+            $table->foreignId('userid')->constrained('users');
             //estrangeira Trabalhos 1-n
-            $table->unsignedBigInteger('trabalho_id');
-            $table->foreign('trabalho_id')->references('id')->on('trabalhos');
+            $table->foreignId('trabalho_id')->constrained('trabalhos');
             //estrangeira estados 1-1
-            $table->unsignedBigInteger('estado_id');
-            $table->foreign('estado_id')->references('id')->on('estados');
+            $table->foreignId('estado_id')->constrained('estados');
             //estrangeira especialidades 1-n
-            $table->unsignedBigInteger('especialidade_id');
-            $table->foreign('especialidade_id')->references('id')->on('especilidades');
-
-
+            $table->foreignId('especialidade_id')->constrained('especialidade_id');
         });
     }
 
