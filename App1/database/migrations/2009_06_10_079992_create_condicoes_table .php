@@ -12,12 +12,11 @@ class CreateCondicoesTable extends Migration
      * @return void
      */
     public function up()
-    {Schema::create('condicoes',function (Blueprint $table) {
-        $table->increments('id');
-        $table->timestamps();
-        $table->string('condicao',255);
-    });
-
+        {Schema::create('condicoes',function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
+            $table->string('condicao',255);
+        });
     }
 
     /**

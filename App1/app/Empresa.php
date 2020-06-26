@@ -22,9 +22,9 @@ class Empresa extends Model
     {
         return $this->hasMany(Especialidades::class);
     }
-    public function estados()
+    public function estado()
     {
-        return $this->hasOne(Estados::class);
+        return $this->hasOne(Estado::class);
     }
     public function trabalhos()
     {

@@ -10,7 +10,7 @@ class Estados extends Model
     {
         return $this->belongsTo(Alunos::class);
     }
-    public function empresas()
+    public function empresa()
     {
         return $this->belongsTo(Empresa::class);
     }

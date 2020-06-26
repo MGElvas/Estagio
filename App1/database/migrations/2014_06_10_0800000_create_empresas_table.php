@@ -28,11 +28,17 @@ class CreateEmpresasTable extends Migration
             //estrangeira User 1-n
             $table->foreignId('userid')->constrained('users');
             //estrangeira Trabalhos 1-n
-            $table->foreignId('trabalho_id')->constrained('trabalhos');
+            //$table->foreignId('trabalho_id')->constrained('trabalhos');
+            $table->integer('trabalho_id')->unsigned();
+            $table->foreign('trabalho_id')->references('id')->on('trabalhos');
             //estrangeira estados 1-1
-            $table->foreignId('estado_id')->constrained('estados');
+            $table->integer('estado_id')->unsigned();
+            $table->foreign('estado_id')->references('id')->on('estados');
+            //$table->foreignId('estado_id')->constrained('estado_id');
             //estrangeira especialidades 1-n
-            $table->foreignId('especialidade_id')->constrained('especialidade_id');
+            $table->integer('especialidade_id')->unsigned();
+            $table->foreign('especialidade_id')->references('id')->on('especialidades');
+            //$table->foreignId('especialidade_id')->constrained('especialidade_id');
         });
     }
 

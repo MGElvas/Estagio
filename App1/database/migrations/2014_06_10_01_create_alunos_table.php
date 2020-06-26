@@ -18,9 +18,13 @@ class CreateAlunosTable extends Migration
             $table->timestamps();
             $table->string('nome',24);
             //estrangeira estados
-            $table->foreignId('estado_id')->constrained('estados_table');
+            $table->integer('estado_id')->unsigned();
+            $table->foreign('estado_id')->references('id')->on('estados');
+            //$table->foreignId('estado_id')->constrained('estados_table');
             //estrangeira candidatos 1-1
-            $table->foreignId('candidato_id')->constrained('candidato_table');
+            $table->integer('candidato_id')->unsigned();
+            $table->foreign('candidato_id')->references('id')->on('candidatos');
+            //$table->foreignId('candidato_id')->constrained('candidato_table');
         });
     }
 
