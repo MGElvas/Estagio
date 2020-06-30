@@ -8,10 +8,31 @@ use App\User;
 
 class PerfilController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        $perfil = Empresa::find(Auth()->id());
+        return view('perfil')->with(compact('perfil'));
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create(){
         return view();
     }
-    
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request){
         $perfil= new Empresa;
         $perfil->nome= request('nome');
@@ -22,6 +43,7 @@ class PerfilController extends Controller
         $perfil->contacto= request('pessoa_contacto');
         $perfil->nContribuinte= request('nContribuinte');
         $perfil->descricao= request('descricao');
+        $perfil->estado='0';
         $perfil->user_id =Auth()->id();
         $perfil->save();
         //return $request->all();
@@ -34,20 +56,35 @@ class PerfilController extends Controller
      * @param  int  $id
      * @return Response
      */
-    public function show($id)
+    public function show()
     {
-        $perfil = Empresa::find($id);
-        return view('show-perfil')->with(compact('perfil'));
+
     }
-    
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function edit(Empresa $perfil){
         return view();
     }
-    
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function update (Empresa $perfil){
         return view();
     }
-
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id){
         return view();
     }

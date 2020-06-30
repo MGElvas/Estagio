@@ -18,9 +18,6 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/perfils', function () {
-    return view('perfil');
-})->name('perfil');
 
 Route::get('/about', function () {
     return view('about');
@@ -60,8 +57,6 @@ Route::get('/job-listings',function(){
 
 
 Route::post('/create','PerfilController@store')->name('guardar');
-Route::get('/show-perfil','PerfilController@show')->name('mostrar');
-
 
 
 Route::get('/amilcar','PerfilController@show');

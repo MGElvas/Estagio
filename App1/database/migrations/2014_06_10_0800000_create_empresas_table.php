@@ -26,10 +26,10 @@ class CreateEmpresasTable extends Migration
             $table->string('contacto',45)->unique();
             $table->string('nContribuinte',16)->unique();
             //estrangeira User 1-n
-            $table->foreignId('userid')->constrained('users');
+            $table->foreignId('user_id')->constrained('users');
             //estrangeira Trabalhos 1-n
             //$table->foreignId('trabalho_id')->constrained('trabalhos');
-            $table->integer('trabalho_id')->unsigned();
+            $table->integer('trabalho_id')->unsigned()->nullable();
             $table->foreign('trabalho_id')->references('id')->on('trabalhos');
             //estrangeira estados 1-1
             $table->integer('estado_id')->unsigned();
@@ -39,6 +39,8 @@ class CreateEmpresasTable extends Migration
             $table->integer('especialidade_id')->unsigned();
             $table->foreign('especialidade_id')->references('id')->on('especialidades');
             //$table->foreignId('especialidade_id')->constrained('especialidade_id');
+
+            //qual era o problema com as chaves estrangeiras? nao sei. mas funciona.
         });
     }
 
