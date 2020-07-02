@@ -8,7 +8,7 @@ class Trabalhos extends Model
 {
     public function empresas()
     {
-        return $this->belongsTo(Empresa::class);
+        return $this->hasOne(Empresa::class);
     }
     public function candidatos()
     {

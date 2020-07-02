@@ -19,7 +19,10 @@ class CreateTrabalhosTable extends Migration
             $table->boolean('estado');
             $table->string('nome',45)->unique();
             $table->string('descricao',220);
-
+            //estrangeira Empresas n-1
+            //$table->foreignId('trabalho_id')->constrained('trabalhos');
+            $table->integer('empresa_id')->unsigned();
+            $table->foreign('empresa_id')->references('id')->on('empresas');
             //estrangeira condicaoTrabalho 1-1
             $table->integer('estado_id')->unsigned();
             $table->foreign('estado_id')->references('id')->on('estados');

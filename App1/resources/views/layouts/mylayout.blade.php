@@ -61,7 +61,7 @@
                                 <li class="has-children">
                                     <a href="services">Pages</a>
                                     <ul class="dropdown">
-                                        <li><a href="perfils">Perfil</a></li>
+                                        <li><a href="perfil">Perfil</a></li>
                                         <li><a href="testimonials">ABC</a></li>
                                         <li><a href="testimonials">Testimonials</a></li>
                                         <li><a href="faq">Frequently Asked Questions</a></li>

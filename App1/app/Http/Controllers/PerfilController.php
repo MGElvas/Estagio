@@ -13,20 +13,24 @@ class PerfilController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        $perfil = Empresa::find(Auth()->id());
-        return view('perfil')->with(compact('perfil'));
-    }
-
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        return view();
+        return view('/create');
     }
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+
+
+
+//FUNCIONA: 
     /**
      * Store a newly created resource in storage.
      *
@@ -47,19 +51,21 @@ class PerfilController extends Controller
         $perfil->user_id =Auth()->id();
         $perfil->save();
         //return $request->all();
-        return (redirect (route('perfil'))->with('fm-success','Perfil criado com sucesso'));
+        return (redirect ('perfils'));
     }
-    
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return Response
-     */
+    public function index()
+    {
+        $perfil = Empresa::find(Auth()->id());
+
+        return view('mperfil',compact('perfil'));
+    }
     public function show()
     {
-
+        return view('perfil');
     }
+
+    
+    //EM DESENVOLVIMENTO:
     /**
      * Show the form for editing the specified resource.
      *
@@ -69,6 +75,7 @@ class PerfilController extends Controller
     public function edit(Empresa $perfil){
         return view();
     }
+
     /**
      * Update the specified resource in storage.
      *
@@ -79,6 +86,7 @@ class PerfilController extends Controller
     public function update (Empresa $perfil){
         return view();
     }
+
     /**
      * Remove the specified resource from storage.
      *
@@ -88,4 +96,5 @@ class PerfilController extends Controller
     public function destroy($id){
         return view();
     }
+    
 }

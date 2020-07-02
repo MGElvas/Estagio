@@ -56,7 +56,7 @@
                         <!-- TEXT AREA ??? -->
                         <textarea class="form-control" name="descricao" id="descricao" cols="30" rows="10" value="{{old('descricao')}}"></textarea>
                     </div>
-                    <input type="submit" value="Confirmar" class="btn btn-sm btn-success">
+                    <input type="submit" href="{{route('store')}} value="Confirmar" class="btn btn-sm btn-success">
                 </form>
             </div>
         </div>

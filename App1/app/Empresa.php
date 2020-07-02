@@ -28,6 +28,6 @@ class Empresa extends Model
     }
     public function trabalhos()
     {
-        return $this->hasMany(Trabalhos::class);
+        return $this->belongsTo(Trabalhos::class);
     }
 }
