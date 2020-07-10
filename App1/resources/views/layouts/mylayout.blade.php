@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>JobBoard &mdash; Website Template by Colorlib</title>
+    <title>Ex-alunos</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="" />
@@ -46,29 +46,29 @@
             <header class="site-navbar mt-3">
                 <div class="container-fluid">
                     <div class="row align-items-center">
-                        <div class="site-logo col-6"><a href="">JobBoard</a></div>
+                        <div class="site-logo col-6"><a href="">Ex-Alunos</a></div>
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
                                 <li><a href="/" class="nav-link active">Home</a></li>
-                                <li><a href="about">About</a></li>
+                                <li><a href="about">Sobre</a></li>
                                 <li class="has-children">
-                                    <a href="job-listings">Job Listings</a>
+                                    <a href="job-listings">Empregos</a>
                                     <ul class="dropdown">
-                                        <li><a href="job-single">Job Single</a></li>
-                                        <li><a href="post-job">Post a Job</a></li>
+                                        <li><a href="job-single">Mostrar Cargos</a></li>
+                                        <li><a href="post-job">Criar Cargos</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-children">
-                                    <a href="services">Pages</a>
+                                    <a href="services">Páginas</a>
                                     <ul class="dropdown">
-                                        <li><a href="perfil">Perfil</a></li>
+                                        <li><a href="perfils">Perfil</a></li>
                                         <li><a href="testimonials">ABC</a></li>
-                                        <li><a href="testimonials">Testimonials</a></li>
-                                        <li><a href="faq">Frequently Asked Questions</a></li>
+                                        <li><a href="testimonials">Testemunhos</a></li>
+                                        <li><a href="faq">F.A.Q</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact">Contact</a></li>
-                                <li class="d-lg-none"><a href="post-job"><span class="mr-2">+</span> Post a Job</a></li>
+                                <li><a href="contact">Contactos</a></li>
+                                <li class="d-lg-none"><a href="post-job"><span class="mr-2">+</span>Criar Cargo</a></li>
                                 <!--LOGIN / USERNAME / LOGOUT / VERIFICAÇOES -->
                                 @guest
                                     <li class="">
@@ -78,7 +78,7 @@
                                     </li>
                                 @else
                                     <li class="has-children">
-                                        <a href="perfil">{{ Auth::user()->name }}</a>
+                                        <a href="perfils">{{ Auth::user()->name }}</a>
                                         <ul class="dropdown">
                                             <li>
                                                 <a class="dropdown-item" href="{{ route('logout') }}"

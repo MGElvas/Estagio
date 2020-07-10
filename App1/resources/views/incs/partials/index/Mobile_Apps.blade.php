@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 align-self-center text-center text-md-left mb-5 mb-md-0">
-                <h2 class="text-white">Get The Mobile Apps</h2>
+                <h2 class="text-white">Apps para telemovel</h2>
                 <p class="mb-5 lead text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci impedit.</p>
                 <p class="mb-0">
                 <a href="#" class="btn btn-dark btn-md px-4 border-width-2"><span class="icon-apple mr-3"></span>App Store</a>

@@ -1,17 +1,44 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Empresa;
-use App\Perfil;
+use App\User;
 
 class PerfilController extends Controller
 {
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
     public function create(){
-        return view();
+        $perfil = Empresa::find(Auth()->id());
+
+        return view('/create',compact('perfil'));
     }
-    
+    /**
+     * Display the specified resource.
+     *
+     * @param  int  $id
+     * @return Response
+     */
+
+
+
+//FUNCIONA: 
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
     public function store(Request $request){
         $perfil= new Empresa;
         $perfil->nome= request('nome');
@@ -22,25 +49,56 @@ class PerfilController extends Controller
         $perfil->contacto= request('pessoa_contacto');
         $perfil->nContribuinte= request('nContribuinte');
         $perfil->descricao= request('descricao');
-
+        $perfil->estado='0';
+        $perfil->user_id =Auth()->id();
         $perfil->save();
         //return $request->all();
-        return (redirect (route('perfil'))->with('fm-success','Perfil criado com sucesso'));
+        return (redirect ('perfils'));
+    }
+
+    public function index()
+    {
+        $perfil = Empresa::find(Auth()->id());
+
+        return view('mperfil',compact('perfil'));
     }
     
-    public function show(Empresa $perfil){
-        return view();
+    public function show()
+    {
+        return view('perfil');
     }
+
     
+    //EM DESENVOLVIMENTO:
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function edit(Empresa $perfil){
         return view();
     }
-    
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function update (Empresa $perfil){
         return view();
     }
 
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
     public function destroy($id){
         return view();
     }
+    
 }

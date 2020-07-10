@@ -1,0 +1,30 @@
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Trabalho extends Model
+{
+    public function empresas()
+    {
+        return $this->hasOne(Empresa::class);
+    }
+    public function candidatos()
+    {
+        return $this->hasMany(Candidatos::class);
+    }
+    public function areas()
+    {
+        return $this->hasMany(Areas::class);
+    }
+    public function localizacoes()
+    {
+        return $this->hasOne(Localizacoes::class);
+    }
+    public function condicoes()
+    {
+        return $this->hasOne(Condicoes::class);
+    }
+
+}

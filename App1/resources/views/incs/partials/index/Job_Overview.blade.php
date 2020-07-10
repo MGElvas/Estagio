@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
-                <h2 class="section-title mb-2">43,167 Job Listed</h2>
+                <h2 class="section-title mb-2">43,167 Visitas</h2>
             </div>
         </div>
         <ul class="job-listings mb-5">
@@ -135,18 +135,18 @@
         </ul>
         <div class="row pagination-wrap">
             <div class="col-md-6 text-center text-md-left mb-4 mb-md-0">
-                <span>Showing 1-7 Of 43,167 Jobs</span>
+                <span>Exibir 1-7 de 43,167 Cargos</span>
             </div>
             <div class="col-md-6 text-center text-md-right">
                 <div class="custom-pagination ml-auto">
-                    <a href="#" class="prev">Prev</a>
+                    <a href="#" class="prev">Anterior</a>
                     <div class="d-inline-block">
                         <a href="#" class="active">1</a>
                         <a href="#">2</a>
                         <a href="#">3</a>
                         <a href="#">4</a>
                     </div>
-                    <a href="#" class="next">Next</a>
+                    <a href="#" class="next">Próximo</a>
                 </div>
             </div>
         </div>

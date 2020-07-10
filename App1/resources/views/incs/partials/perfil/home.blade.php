@@ -4,26 +4,22 @@
         <div class="row">
             <div class="col-md-7"> 
                 <div class="custom-breadcrumbs">
-                    <a href="#">Home</a> <span class="mx-2 slash">/</span>
+                    <a href="/">Home</a> <span class="mx-2 slash">/</span>
                     <span class="text-white"><strong>Perfil</strong></span>
                 </div>
             </div>
         </div>
-<!-- PERFIL Preenchido? Sim:     -->
-        <div class="row">
-            <div class="col-md-7">
-                <h1 class="text-white font-weight-bold">Bem vindo ao seu Perfil</h1>
-                <!--MOSTRAR DADOS -->
+        <!-- PERFIL Preenchido? Sim:     -->
+        @guest
+            <h1>Faça login para ter acesso a esta página</h1>
+        @else
+            <div class="row">
+                <h1  class="text-white font-weight-bold">Veja o seu perfil <a href="{{route('perfil')}}">aqui</a></h1>
             </div>
-        </div>
-<!-- PERFIL Preenchido? Nao:     -->
-        <div class="row">
-            <div class="col-md-7">
-                <h1 class="text-white font-weight-bold">Preencha o seu Perfil</h1>
+            <!-- PERFIL Preenchido? Nao:     -->
+            <div class="row">
+                <h1  class="text-white font-weight-bold">Crie o seu perfil <a href="{{route('Criar')}}">aqui</a></h1>
             </div>
-            <div class="col-md-7">
-                <a href="/create"><h1 class="text-white font-weight-bold">Create</h1></a>
-            </div>
-        </div>
+        @endguest
     </div>
 </section>

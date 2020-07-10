@@ -3,7 +3,7 @@
         <div class="row align-items-center justify-content-center">
             <div class="col-md-12">
                 <div class="mb-5 text-center">
-                    <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Dream Job</h1>
+                    <h1 class="text-white font-weight-bold">Lorem Ipsum: </h1>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
                 </div>
                 <form method="post" class="search-jobs-form">
@@ -13,15 +13,15 @@
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
                             <select class="selectpicker" data-style="btn-white btn-lg" data-width="100%" data-live-search="true" title="Select Region">
-                                <option>Anywhere</option>
-                                <option>San Francisco</option>
-                                <option>Palo Alto</option>
-                                <option>New York</option>
-                                <option>Manhattan</option>
-                                <option>Ontario</option>
-                                <option>Toronto</option>
-                                <option>Kansas</option>
-                                <option>Mountain View</option>
+                                <option>CIDADE A</option>
+                                <option>CIDADE B</option>
+                                <option>CIDADE C</option>
+                                <option>CIDADE D</option>
+                                <option>CIDADE E</option>
+                                <option>CIDADE F</option>
+                                <option>CIDADE G</option>
+                                <option>CIDADE H</option>
+                                <option>CIDADE I</option>
                             </select>
                         </div>
                         <div class="col-12 col-sm-6 col-md-6 col-lg-3 mb-4 mb-lg-0">
@@ -36,11 +36,11 @@
                     </div>
                     <div class="row">
                         <div class="col-md-12 popular-keywords">
-                            <h3>Trending Keywords:</h3>
+                            <h3>Lorem Ipsum:</h3>
                             <ul class="keywords list-unstyled m-0 p-0">
-                                <li><a href="#" class="">UI Designer</a></li>
-                                <li><a href="#" class="">Python</a></li>
-                                <li><a href="#" class="">Developer</a></li>
+                                <li><a href="#" class="">A</a></li>
+                                <li><a href="#" class="">B</a></li>
+                                <li><a href="#" class="">C</a></li>
                             </ul>
                         </div>
                     </div>

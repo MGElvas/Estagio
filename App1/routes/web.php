@@ -14,14 +14,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Auth::routes();
 
 Route::get('/', function () {
     return view('index');
 })->name('index');
 
-Route::get('/perfil', function () {
-    return view('perfil');
-})->name('perfil');
 
 Route::get('/about', function () {
     return view('about');
@@ -50,11 +48,20 @@ Route::get('/post-job', function () {
 Route::get('testimonials', function () {
     return view('testimonials');
 })->name('testimonials');
-Auth::routes();
+
+Route::get('/editar',function(){
+    return view ('editar');
+})->name('editar');
 
 Route::get('/job-listings',function(){
     return view('job-listings');
 })->name('job-listings');
 
+route::get('/meuperfil','PerfilController@index')->name('perfil');
+
+Route::get('/create','PerfilController@create')->name('Criar');
+Route::post('/create','PerfilController@store')->name('store');
+Route::get('/post-job','TrabalhoController@create')->name('TCriar');
+Route::post('/post-job','TrabalhoController@store')->name('tstore');
+Route::get('/perfils','PerfilController@show');
 Route::get('/home', 'HomeController@index')->name('home');
-Route::post('/create','PerfilController@store');
