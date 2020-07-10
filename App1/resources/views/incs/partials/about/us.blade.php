@@ -8,7 +8,7 @@
                 </a>
             </div>
             <div class="col-lg-5 ml-auto">
-                <h2 class="section-title mb-3">JobBoard For Freelancers, Web Developers</h2>
+                <h2 class="section-title mb-3">Ex-Alunos</h2>
                 <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
                 <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
             </div>
@@ -25,7 +25,7 @@
                 </a>
             </div>
             <div class="col-lg-5 mr-auto order-md-1  mb-5 mb-lg-0">
-                <h2 class="section-title mb-3">JobBoard For Workers</h2>
+                <h2 class="section-title mb-3">Ex-Alunos</h2>
                 <p class="lead">Eveniet voluptatibus voluptates suscipit minima, cum voluptatum ut dolor, sed facere corporis qui, ea quisquam quis odit minus nulla vitae. Sit, voluptatem.</p>
                 <p>Ipsum harum assumenda in eum vel eveniet numquam, cumque vero vitae enim cupiditate deserunt eligendi officia modi consectetur. Expedita tempora quos nobis earum hic ex asperiores quisquam optio nostrum sit!</p>
             </div>

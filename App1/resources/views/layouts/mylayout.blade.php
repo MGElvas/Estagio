@@ -50,7 +50,6 @@
                         <nav class="mx-auto site-navigation">
                             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
                                 <li><a href="/" class="nav-link active">Home</a></li>
-                                <li><a href="about">Sobre</a></li>
                                 <li class="has-children">
                                     <a href="job-listings">Empregos</a>
                                     <ul class="dropdown">
@@ -62,12 +61,8 @@
                                     <a href="services">Páginas</a>
                                     <ul class="dropdown">
                                         <li><a href="perfils">Perfil</a></li>
-                                        <li><a href="testimonials">ABC</a></li>
-                                        <li><a href="testimonials">Testemunhos</a></li>
-                                        <li><a href="faq">F.A.Q</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact">Contactos</a></li>
                                 <li class="d-lg-none"><a href="post-job"><span class="mr-2">+</span>Criar Cargo</a></li>
                                 <!--LOGIN / USERNAME / LOGOUT / VERIFICAÇOES -->
                                 @guest
@@ -120,7 +115,7 @@
             <div class="container">
                 <div class="row mb-5">
                 <div class="col-6 col-md-3 mb-4 mb-md-0">
-                    <h3>Search Trending</h3>
+                    <h3>Populares</h3>
                     <ul class="list-unstyled">
                         <li><a href="#">Web Design</a></li>
                         <li><a href="#">Graphic Design</a></li>
@@ -131,24 +126,22 @@
                     </ul>
                 </div>
                 <div class="col-6 col-md-3 mb-4 mb-md-0">
-                    <h3>Company</h3>
+                    <h3>Empresa</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Career</a></li>
+                        <li><a href="#">Sobre nós</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">Resources</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3 mb-4 mb-md-0">
-                    <h3>Support</h3>
+                    <h3>Suporte</h3>
                     <ul class="list-unstyled">
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Suporte</a></li>
+                        <li><a href="#">Privacidade</a></li>
                         <li><a href="#">Terms of Service</a></li>
                     </ul>
                 </div>
                 <div class="col-6 col-md-3 mb-4 mb-md-0">
-                    <h3>Contact Us</h3>
+                    <h3>Contactos</h3>
                     <div class="footer-social">
                     <a href="#"><span class="icon-facebook"></span></a>
                     <a href="#"><span class="icon-twitter"></span></a>

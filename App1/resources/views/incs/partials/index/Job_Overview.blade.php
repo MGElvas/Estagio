@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row mb-5 justify-content-center">
             <div class="col-md-7 text-center">
-                <h2 class="section-title mb-2">43,167 Visitas</h2>
+                <h2 class="section-title mb-2"></h2>
             </div>
         </div>
         <ul class="job-listings mb-5">

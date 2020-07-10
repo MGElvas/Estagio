@@ -11,7 +11,9 @@
         </div>
         <!-- PERFIL Preenchido? Sim:     -->
         @guest
-            <h1>Faça login para ter acesso a esta página</h1>
+            <h1 style="color:white">Faça login para ter acesso a esta página</h1>
+            <br>            <br>
+
         @else
             <div class="row">
                 <h1  class="text-white font-weight-bold">Veja o seu perfil <a href="{{route('perfil')}}">aqui</a></h1>
